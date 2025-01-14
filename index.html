@@ -1,38 +1,129 @@
-const projects = [
-  {
-    "title": "Random Person Selector",
-    "description": "A web app to randomly select individuals, featuring interactive JavaScript logic and smooth CSS animations.",
-    "image": "random.jpg",
-    "link": "https://KondaBabu77.github.io/selecting-random-persons/"
-  },
-  {
-    "title": "Grid Game",
-    "description": "An engaging grid-based game where players interact with dynamic elements, showcasing creative use of CSS and JavaScript.",
-    "image": "grid.jpg",
-    "link": "https://kondababu77.github.io/My-Grid-Game/"
-  },
-  {
-    "title": "Calculator",
-    "description": "A responsive calculator app for basic and advanced arithmetic operations, built with modern design principles and JavaScript.",
-    "image": "cal.jpg",
-    "link": "https://kondababu77.github.io/simple-calculator/"
-  }
-];
-
-const projectList = document.querySelector(".project-list");
-
-projects.forEach(project => {
-  const projectCard = document.createElement("div");
-  projectCard.classList.add("project-card");
-
-  projectCard.innerHTML = `
-    <img src="${project.image}" alt="${project.title}" class="project-img">
-    <div class="project-info">
-      <h3 class="project-title">${project.title}</h3>
-      <p class="project-description">${project.description}</p>
-      <a href="${project.link}" class="project-link" target="_blank">View Project</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="theme-toggle">
+      <span>🌞</span>
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider round"></span>
+      </label>
+      <span>🌙</span>
     </div>
-  `;
 
-  projectList.appendChild(projectCard);
-});
+    <div class="intro">
+      <p>Hi!</p>
+      <h1>
+        I'm <span class="highlight">Parasa Konda Babu</span>,<br>
+        Aspiring <span class="highlight">MERN Developer</span>.
+      </h1>
+      <p>I build engaging digital experiences 💻</p>
+    </div>
+
+    <section class="about-skills">
+      <div class="about">
+        <h2>ABOUT</h2>
+        <p>My name is Konda Babu Parasa, and I’m currently pursuing my B.Tech in Computer Science and Engineering (CSE) at <a href="https://gecgudlavalleru.ac.in/">SRGEC</a>.</p>
+        <p>I have a strong foundation in programming languages like Java, Python, and JavaScript, and I’ve worked on web development projects using HTML, CSS, and React.js.</p>
+        <p>I’m passionate about becoming a software developer and excited about the opportunity to work with a team to develop innovative software solutions.</p>
+      </div>
+
+      <div class="skills">
+        <h2>SKILLS</h2>
+        <div class="skills-grid">
+          <div>
+            <h3>LANGUAGES</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>C</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3>FRAMEWORKS / LIBRARIES</h3>
+            <ul>
+              <li>React</li>
+              <li>Next.js</li>
+            </ul>
+          </div>
+          <div>
+            <h3>TOOLS</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Node</li>
+            </ul>
+          </div>
+          <div>
+            <h3>OTHER</h3>
+            <ul>
+              <li>Video editing</li>
+              <li>Photo editing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-education">
+      <div class="experience">
+        <h2>EXPERIENCE</h2>
+        <div class="item">
+          <div>
+            <h3>Personal Projects</h3>
+            <p>Developed multiple small projects, including a random person selector website using HTML, CSS, and JavaScript.</p>
+          </div>
+          <p class="date">2023 - Present</p>
+        </div>
+        <div class="item">
+          <div>
+            <h3>Hackathon Participation</h3>
+            <p>Participated in hackathons focused on problem-solving.</p>
+          </div>
+          <p class="date">2023 - 2024</p>
+        </div>
+      </div>
+
+      <div class="education">
+        <h2>EDUCATION</h2>
+        <div class="item">
+          <div>
+            <h3>SRGEC</h3>
+            <p>Computer Science</p>
+          </div>
+          <p class="date">June 2025 - Present</p>
+        </div>
+      </div>
+
+      <div class="resume">
+        <a href="#" class="resume-btn">View My Resume →</a>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>PROJECTS</h2>
+      <div class="project-list"></div>
+    </section>
+
+    <div class="contact">
+      <p><strong>Get in touch</strong> 👉 <a href="mailto:kondababuparasa001@gmail.com">kondababuparasa001@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/konda_babu_45">Instagram</a>
+        <a href="https://github.com/KondaBabu77">GitHub</a>
+        <a href="https://www.linkedin.com/in/konda-babu-parasa-81846a2b5/">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
